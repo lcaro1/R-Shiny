@@ -22,7 +22,7 @@ obtener_indicadores <- memoise(function(empresa) {
   url <- stringr::str_c("https://www.elmercurio.com/inversiones/json/json.aspx?categoria=",
                         empresa, "&time=10&indicador=2")
 
-  df <- jsonlite::read_json(url)$Data %>%
+  df <- jsonlite::read_json(URLencode(url))$Data %>%
     stringr::str_split(";") %>%
     dplyr::first() %>%
     I() %>%
