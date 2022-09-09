@@ -4,7 +4,6 @@ require(jsonlite)
 require(DT)
 require(shiny)
 require(shinythemes)
-require(htmltools)
 require(memoise)
 
 # lista de empresas
